@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin | Bus MVP</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="dot"></div>
+      <div>
+        <h1>Bus MVP</h1>
+        <p>Panel Admin · Pasajeros</p>
+      </div>
+    </div>
+    <nav class="actions">
+      <a class="link" href="../pass/scan.html">Ir a Registro</a>
+      <button id="btnNew" class="btn primary">+ Nuevo pasajero</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="row">
+        <div class="field">
+          <label>Buscar</label>
+          <input id="search" type="search" placeholder="Nombre, documento o código..." />
+        </div>
+        <div class="field">
+          <label>Filtrar</label>
+          <select id="filterActive">
+            <option value="all">Todos</option>
+            <option value="active">Activos</option>
+            <option value="inactive">Inactivos</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tableWrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>Nombre</th>
+              <th>Documento</th>
+              <th>Código</th>
+              <th>Estado</th>
+              <th style="width: 220px;">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <dialog id="modal" class="modal">
+    <form method="dialog" class="modalCard" id="formPassenger">
+      <div class="modalHead">
+        <h2 id="modalTitle">Nuevo pasajero</h2>
+        <button class="iconBtn" value="cancel" aria-label="Cerrar">✕</button>
+      </div>
+
+      <input type="hidden" id="passengerId" />
+
+      <div class="grid">
+        <div class="field">
+          <label>Nombre</label>
+          <input id="name" required placeholder="Ej: Juan Pérez" />
+        </div>
+        <div class="field">
+          <label>Documento</label>
+          <input id="doc" required placeholder="Ej: 01234567-8" />
+        </div>
+        <div class="field">
+          <label>Código</label>
+          <input id="code" required placeholder="Ej: JP-5678" />
+          <small>Tip: iniciales + últimos 4 del documento</small>
+        </div>
+        <div class="field">
+          <label>Foto (URL)</label>
+          <input id="photoURL" placeholder="https://..." />
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 10px;">
+        <div class="field">
+          <label>Estado</label>
+          <select id="active">
+            <option value="true">Activo</option>
+            <option value="false">Inactivo</option>
+          </select>
+        </div>
+        <div class="spacer"></div>
+      </div>
+
+      <div class="modalFoot">
+        <button class="btn" value="cancel" type="button" id="btnCancel">Cancelar</button>
+        <button class="btn primary" id="btnSave" type="submit">Guardar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+{
+  "passengers": {
+    "p001": {
+      "name": "Elihú Benjamín Martínez",
+      "doc": "06123456-7",
+      "code": "EB-3456",
+      "photoURL": "https://i.pravatar.cc/150?img=12",
+      "active": true,
+      "createdAt": 1730000000000
+    },
+    "p002": {
+      "name": "Verónica Jimena Sibrián",
+      "doc": "01234567-8",
+      "code": "VJ-4567",
+      "photoURL": "https://i.pravatar.cc/150?img=32",
+      "active": true,
+      "createdAt": 1730000000000
+    },
+    "p003": {
+      "name": "Edwin Antonio Salguero",
+      "doc": "07890123-4",
+      "code": "EA-0123",
+      "photoURL": "https://i.pravatar.cc/150?img=5",
+      "active": true,
+      "createdAt": 1730000000000
+    },
+    "p004": {
+      "name": "Dilcia Camila Hernández",
+      "doc": "03456789-0",
+      "code": "DC-6789",
+      "photoURL": "https://i.pravatar.cc/150?img=47",
+      "active": true,
+      "createdAt": 1730000000000
+    },
+    "p005": {
+      "name": "Carlos Olmedo",
+      "doc": "05678901-2",
+      "code": "CO-8901",
+      "photoURL": "https://i.pravatar.cc/150?img=22",
+      "active": true,
+      "createdAt": 1730000000000
+    },
+    "p006": {
+      "name": "Ana María Morales",
+      "doc": "09012345-6",
+      "code": "AM-2345",
+      "photoURL": "https://i.pravatar.cc/150?img=15",
+      "active": true,
+      "createdAt": 1730000000000
+    },
+    "p007": {
+      "name": "José Daniel Pérez",
+      "doc": "02345678-9",
+      "code": "JD-5678",
+      "photoURL": "https://i.pravatar.cc/150?img=3",
+      "active": true,
+      "createdAt": 1730000000000
+    },
+    "p008": {
+      "name": "María Fernanda López",
+      "doc": "06789012-3",
+      "code": "MF-9012",
+      "photoURL": "https://i.pravatar.cc/150?img=40",
+      "active": true,
+      "createdAt": 1730000000000
+    },
+    "p009": {
+      "name": "Kevin Alexander Ruiz",
+      "doc": "04567890-1",
+      "code": "KA-7890",
+      "photoURL": "https://i.pravatar.cc/150?img=28",
+      "active": true,
+      "createdAt": 1730000000000
+    },
+    "p010": {
+      "name": "Sofía Valeria Torres",
+      "doc": "08901234-5",
+      "code": "SV-1234",
+      "photoURL": "https://i.pravatar.cc/150?img=9",
+      "active": true,
+      "createdAt": 1730000000000
+    }
+  },
+  "codes": {
+    "EB-3456": "p001",
+    "VJ-4567": "p002",
+    "EA-0123": "p003",
+    "DC-6789": "p004",
+    "CO-8901": "p005",
+    "AM-2345": "p006",
+    "JD-5678": "p007",
+    "MF-9012": "p008",
+    "KA-7890": "p009",
+    "SV-1234": "p010"
+  },
+  "attendance": {
+    "2026-01-27": {
+      "r001": {
+        "passengerId": "p003",
+        "code": "EA-0123",
+        "direction": "IDA",
+        "timestamp": 1760000000000
+      },
+      "r002": {
+        "passengerId": "p004",
+        "code": "DC-6789",
+        "direction": "IDA",
+        "timestamp": 1760000300000
+      },
+      "r003": {
+        "passengerId": "p002",
+        "code": "VJ-4567",
+        "direction": "VUELTA",
+        "timestamp": 1760000600000
+      }
+    }
+  }
+}
