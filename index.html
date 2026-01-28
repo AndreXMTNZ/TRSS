@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bus MVP</title>
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#111824;
+      --line:#1d2a3b;
+      --text:#eaf2ff;
+      --muted:#9bb0c6;
+      --pri:#4da3ff;
+      --pri2:#2c7ef6;
+      --radius:18px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      background:radial-gradient(1200px 800px at 20% 0%, #132238 0%, var(--bg) 60%);
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+    .wrap{
+      width:100%;
+      max-width:720px;
+      text-align:center;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:14px;
+      margin-bottom:12px;
+    }
+    .dot{
+      width:14px;height:14px;border-radius:999px;
+      background:var(--pri);
+      box-shadow:0 0 0 6px rgba(77,163,255,.15);
+    }
+    h1{margin:0;font-size:28px}
+    p{margin:6px 0 28px;color:var(--muted)}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+    @media(max-width:700px){
+      .grid{grid-template-columns:1fr}
+    }
+    .card{
+      background:rgba(17,24,36,.92);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+      text-align:left;
+      transition:transform .15s ease, border-color .15s ease;
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:#2d88ff;
+    }
+    .card h2{
+      margin:0 0 6px;
+      font-size:20px;
+    }
+    .card p{
+      margin:0 0 18px;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      padding:14px 18px;
+      border-radius:14px;
+      font-weight:800;
+      color:#06101c;
+      background:linear-gradient(180deg,var(--pri),var(--pri2));
+    }
+    .footer{
+      margin-top:28px;
+      font-size:12px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <div class="dot"></div>
+      <h1>Bus MVP</h1>
+    </div>
+    <p>Demo · Gestión y registro de pasajeros</p>
+
+    <div class="grid">
+      <div class="card">
+        <h2>👤 Registro</h2>
+        <p>
+          Vista para el operador o pasajero.<br>
+          Ingreso de código y registro de IDA / VUELTA.
+        </p>
+        <a class="btn" href="pass/scan.html">Ir a Registro</a>
+      </div>
+
+      <div class="card">
+        <h2>🛠 Panel Admin</h2>
+        <p>
+          Gestión de pasajeros.<br>
+          Crear, editar, activar o desactivar registros.
+        </p>
+        <a class="btn" href="admin/admin.html">Ir a Admin</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      Bus MVP · Demo sin login · Firebase Realtime Database
+    </div>
+  </div>
+</body>
+</html>
