@@ -12,7 +12,7 @@
       <div class="dot"></div>
       <div>
         <h1>Registro</h1>
-        <p>Ingresa el código y marca IDA/VUELTA</p>
+        <p>Selecciona ruta y registra IDA / VUELTA</p>
       </div>
     </div>
     <nav class="actions">
@@ -23,6 +23,15 @@
   <main class="container">
     <section class="card">
       <div class="grid">
+        <!-- RUTA: ocupa toda la fila -->
+        <div class="field field-full">
+          <label>Ruta (Trip)</label>
+          <select id="tripSelect"></select>
+          <div id="tripInfo" class="tripInfo hidden"></div>
+          <small>Ej: IDA · Soyapango → Santa Tecla</small>
+        </div>
+
+        <!-- abajo: código + viaje + botón -->
         <div class="field">
           <label>Código</label>
           <input id="code" placeholder="Ej: EA-0123" autocomplete="off" />
@@ -43,7 +52,6 @@
       </div>
 
       <div id="preview" class="preview hidden"></div>
-
       <div class="hint" id="status"></div>
     </section>
 
@@ -53,7 +61,8 @@
         <div class="muted" id="todayLabel"></div>
       </div>
 
-      <div class="list" id="list"></div>
+      <div class="muted" id="tripLabel" style="margin-top:6px;"></div>
+      <div class="list" id="list" style="margin-top:12px;"></div>
     </section>
   </main>
 

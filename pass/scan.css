@@ -24,10 +24,20 @@ body{margin:0;background:radial-gradient(1200px 800px at 20% 0%, #132238 0%, var
   background:rgba(17,24,36,.9); border:1px solid var(--line); border-radius:var(--radius);
   box-shadow:var(--shadow); padding:16px; margin-bottom:16px;
 }
+
+/* ✅ GRID: ruta ocupa toda la fila, luego 3 columnas */
 .grid{
-  display:grid; grid-template-columns: 2fr 1fr 1fr; gap:12px;
+  display:grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap:12px;
 }
-@media (max-width:720px){ .grid{grid-template-columns:1fr} }
+.field-full{ grid-column: 1 / -1; }
+
+@media (max-width:720px){
+  .grid{grid-template-columns:1fr}
+  .field-full{ grid-column:auto; }
+}
+
 .field{display:flex; flex-direction:column; gap:6px}
 label{font-size:12px; color:var(--muted)}
 input, select{
@@ -62,3 +72,32 @@ input:focus, select:focus{border-color:#2d88ff; box-shadow:0 0 0 4px rgba(45,136
 .tag{font-size:12px; padding:6px 10px; border-radius:999px; border:1px solid #203047; color:var(--muted)}
 strong{font-size:13px}
 small{display:block; color:var(--muted); font-size:11px; margin-top:2px}
+
+/* ✅ RUTA INFO */
+.tripInfo{
+  margin-top:10px;
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  background: rgba(12,18,28,.6);
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.tripInfo.hidden{ display:none; }
+
+.tripBadge{
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:800;
+  font-size:12px;
+  border:1px solid rgba(77,163,255,.35);
+  background: rgba(77,163,255,.14);
+}
+.tripText{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.tripText strong{ font-size:14px; }
+.tripText small{ opacity:.75; }
